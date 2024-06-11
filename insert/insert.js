@@ -9,7 +9,7 @@ router.post("/", (req, res) => {
     if (err) {
       console.log("Error connecting");
     } else {
-      let db = conn.db("nodedb");
+      let db = conn.db("students");
       db.collection("students").insertOne(obj, (err) => {
         if (err) {
           console.log("Error inserting");
